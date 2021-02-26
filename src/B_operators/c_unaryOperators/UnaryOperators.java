@@ -40,9 +40,16 @@ public class UnaryOperators {
         int f = ++e*5/(e--)+(--e); // ++3*5/(4--)+(--4) > 4*5/4+2 > 20/4+2 > 7
         System.out.println("e = " + e + ", f = " + f);
 
+        /**
+         * operators precedence:
+         * 1. pre/post increment/decrement
+         * 2. remainder/modulus
+         * 3 arithmetic
+          */
         int g = 6;
         int h = 2;
-        int i = (++h)+(--g)*3+2*(g++)-(h--)%(--g); // (++h)+(--g)*3+2*(g++)-(h--)%(--g) > 3+5*3+2*(5--)-(3--)%3 >
+        int i = (++h)+(--g)*3+2*(g++)-(h--)%(--g); // 3+5*3+2*(5++)-(3--)%5 > 3+5*3+2*5-3%5 > 3+15+10-3%5 > 3+15+10-3 > 25
+        System.out.println("g = " + g + ", h = " + h + ", i = " + i);
 
     }
 }
