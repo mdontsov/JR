@@ -44,10 +44,10 @@ public class NestedLoops {
         }
 
         int x = 10;
-        while (x > 0) {
+        while (x > 0) { // outer while loop executes until its condition is true
             do {
                 x -= 1; // 4-1>3 | 2-1>1
-            } while (x > 5); // 9-1>8 | 8-1>7 | 7-1>6 | 6-1>5
+            } while (x > 7); // 9-1>8 | 8-1>7 | 7-1>6 | 6-1>5 | as soon as inner while loop condition is false it will just pass the x variable through?
             x--; // 5-- >4 | 3-- >2  | 1-- >0
             System.out.println(x); // 4, 2, 0
         }
