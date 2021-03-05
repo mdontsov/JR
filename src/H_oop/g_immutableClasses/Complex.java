@@ -1,0 +1,55 @@
+package H_oop.g_immutableClasses;
+
+public class Complex {
+
+    private final double real;
+    private final double imaginary;
+
+    public Complex(double real, double imaginary) {
+        this.real = real;
+        this.imaginary = imaginary;
+    }
+
+    public double getReal() {
+        return real;
+    }
+
+    public double getImaginary() {
+        return imaginary;
+    }
+
+    public Complex plus(Complex b) {
+        double newReal = real + b.real; // original class variable NOT changed
+        double newImaginary = imaginary + b.imaginary; // original class variable NOT changed
+        return new Complex(newReal, newImaginary); // returning new object instance from method
+    }
+
+    public Complex minus(Complex b) {
+        double newReal = real - b.real;
+        double newImaginary = imaginary - b.imaginary;
+        return new Complex(newReal, newImaginary);
+    }
+
+    public Complex times(Complex b) {
+        double newReal = (real * b.real) - (imaginary * b.imaginary);
+        double newImaginary = (real * b.imaginary) + (imaginary * b.real);
+        return new Complex(newReal, newImaginary);
+    }
+
+    public static Complex plus(Complex a, Complex b) {
+//        double real = a.real + b.real;
+//        double imaginary = a.imaginary + b.imaginary;
+//        return new Complex(real, imaginary);
+        return a.plus(b);
+    }
+
+    public static void main(String[] args) {
+        Complex a = new Complex(5.0, 6.0);
+        Complex b = new Complex(-3.0, 4.0);
+
+        Complex bPlusA = Complex.plus(a, b);
+        System.out.println("a real = " + a.real + ", a imaginary = " + a.imaginary);
+        System.out.println("b real = " + b.real + ", b imaginary = " + b.imaginary);
+        System.out.println("b + a real = " + bPlusA.real + ", b + a imaginary = " + bPlusA.imaginary);
+    }
+}

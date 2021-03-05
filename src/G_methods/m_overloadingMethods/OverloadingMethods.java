@@ -80,7 +80,7 @@ public class OverloadingMethods {
 
     // Auto-promotion: int > long > Integer > Varargs > not valid
     public static void main(String[] args) {
-//        run(5L);
+//        Run(5L);
 //        jump("Test");
 //        jump(25); // Object is a super type for all objects
         sum(1, 2);

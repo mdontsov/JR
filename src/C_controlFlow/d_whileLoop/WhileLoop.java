@@ -14,7 +14,7 @@ public class WhileLoop {
         int x = 2;
         int y = 5;
         while (x < 10) {
-            ++y; // x will always = 2 and never reach 10 > y will run in an endless loop
+            ++y; // x will always = 2 and never reach 10 > y will Run in an endless loop
             ++x;
         }
         System.out.println("x = " + x + ", y = " + y);

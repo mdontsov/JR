@@ -65,13 +65,13 @@ public class IteratingArrayList {
         }
 
         totalTime = System.currentTimeMillis() - startTime;
-        System.out.println("For loop run time: " + totalTime + "ms");
+        System.out.println("For loop Run time: " + totalTime + "ms");
 
         // Foreach loop
         startTime = System.currentTimeMillis();
         for (String str : stringList) { }
         totalTime = System.currentTimeMillis() - startTime;
-        System.out.println("Foreach loop run time: " + totalTime + "ms");
+        System.out.println("Foreach loop Run time: " + totalTime + "ms");
 
         // Iterator
         startTime = System.currentTimeMillis();
@@ -80,7 +80,7 @@ public class IteratingArrayList {
             _temp = stringIterator.next();
         }
         totalTime = System.currentTimeMillis() - startTime;
-        System.out.println("Iterator run time: " + totalTime + "ms");
+        System.out.println("Iterator Run time: " + totalTime + "ms");
 
         // ListIterator
         startTime = System.currentTimeMillis();
@@ -89,7 +89,7 @@ public class IteratingArrayList {
             _temp = stringListIterator.next();
         }
         totalTime = System.currentTimeMillis() - startTime;
-        System.out.println("ListIterator run time: " + totalTime + "ms");
+        System.out.println("ListIterator Run time: " + totalTime + "ms");
     }
 
     private static String[] createArray() {
